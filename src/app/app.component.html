@@ -1,2 +1,14 @@
-<h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<div id="dude">
+  <div id="startDate">
+    <label>Start Date:</label>
+    <input [(ngModel)]="startDate" type="date" (change)="checkDate()">
+  </div>
+  <div id="endDate">
+    <label>Start Date:</label>
+    <input [(ngModel)]="endDate" type="date" (change)="checkDate()">
+  </div>
+  <br>
+  <div id="submitButton" style="margin-left: 150px">
+    <button [disabled]="frude">Submit</button>
+  </div>
+</div>
