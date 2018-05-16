@@ -1,0 +1,17 @@
+<div id="dude">
+    <div id="startDate">
+      <label>Start Date:</label>
+      <input [(ngModel)]="startDate" type="date" (change)="checkDate()">
+      <div *ngIf="wrongStartDate" style="color: red;">start date should be less than end date</div>
+    </div>
+    <div id="endDate">
+      <label>End Date:</label>
+      <input [(ngModel)]="endDate" type="date" (change)="checkDate()">
+      <div *ngIf="wrongEndDate" style="color: red;">end date should be greater than or equal to start date</div>
+    </div>
+    <br>
+    <div id="submitButton" style="margin-left: 150px">
+      <button [disabled]="frude">Submit</button>
+    </div>
+  </div>
+  
