@@ -2,16 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes, Router } from'@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DatevalidationComponent } from './components/datevalidation/datevalidation.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { ApicallsService } from './services/apicalls.service';
 
 const appRoutes: Routes = [
   {path: 'datevalidation', component: DatevalidationComponent},
-  {path: 'home', component: AppComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: 'home', component: HomeComponent},
+  // {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -19,17 +22,20 @@ const appRoutes: Routes = [
     AppComponent,
     HeroesComponent,
     DatevalidationComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes, 
-      {enableTracing: true}
-    )
+      appRoutes
+    ),
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    ApicallsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
