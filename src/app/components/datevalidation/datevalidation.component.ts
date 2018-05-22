@@ -9,9 +9,11 @@ export class DatevalidationComponent implements OnInit {
   title = "Tour of Heroes";
   startDate;
   endDate;
-  frude = false;
+  frude = true;
   wrongStartDate = false;
-  ngOnInit() {}
+  ngOnInit() {
+ 
+  }
   checkDate() {
     if (this.startDate >= this.endDate) {
       this.frude = true;
@@ -20,6 +22,10 @@ export class DatevalidationComponent implements OnInit {
     if (this.startDate <= this.endDate) {
       this.frude = false;
       this.wrongStartDate = false;
+    }
+    if (this.startDate >= this.endDate) {
+      this.frude = true;
+      this.wrongStartDate = true;
     }
   }
 }

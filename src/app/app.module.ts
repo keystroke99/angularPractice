@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes, Router } from'@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -10,10 +10,13 @@ import { DatevalidationComponent } from './components/datevalidation/datevalidat
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ApicallsService } from './services/apicalls.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {path: 'datevalidation', component: DatevalidationComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'celebrities', component: HeroesComponent},
+  {path: 'dashboard', component: DashboardComponent},
   // {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
     HeroesComponent,
     DatevalidationComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    HttpModule
+    HttpClientModule
   ],
   providers: [
     ApicallsService

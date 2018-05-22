@@ -1,7 +1,32 @@
-<h2>{{ hero.name | uppercase }} Details</h2>
-<div><span>id: </span> {{ hero.id }}</div>
+<div class="container">
+  <h2>Celebrities list</h2>
 <div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name">
-  </label>
+<table class="table">
+  <thead>
+    <th>
+      memberId
+    </th>
+    <th>
+      email
+    </th>
+    <th>
+      mobile
+    </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users">
+      <td>
+        {{user._id}}
+      </td>
+      <td>
+        {{user.email}}
+      </td>
+      <td>
+        {{user.mobileNumber}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 </div>
