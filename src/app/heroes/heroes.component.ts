@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  private subscription: Subscription;
   hero: Hero = {
     id: 1,
     name: 'Windstorm'

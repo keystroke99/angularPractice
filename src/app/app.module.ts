@@ -11,12 +11,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ApicallsService } from './services/apicalls.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FeedsComponent } from './components/feeds/feeds.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 const appRoutes: Routes = [
   {path: 'datevalidation', component: DatevalidationComponent},
   {path: 'home', component: HomeComponent},
   {path: 'celebrities', component: HeroesComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'feeds', component: FeedsComponent},
   // {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -27,7 +30,9 @@ const appRoutes: Routes = [
     DatevalidationComponent,
     NavbarComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    FeedsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
