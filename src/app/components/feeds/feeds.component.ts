@@ -12,11 +12,15 @@ export class FeedsComponent implements OnInit {
   Feeds: any =[];
   Comments: any =[];
   imageUrl = this.apiCallService.url;
+  def = true;
+  dude = false;
 
   constructor(private apiCallService: ApicallsService) { }
 
   ngOnInit() {
     this.apiCallService.getFeeds().subscribe(data => {
+      this.def = false;
+      this.dude = true;
       this.Feeds = data;
     });
   }

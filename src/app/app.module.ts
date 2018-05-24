@@ -22,8 +22,7 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'feeds', component: FeedsComponent},
   {path: 'liveStatus', component: LivestatusComponent},
-  
-  // {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
