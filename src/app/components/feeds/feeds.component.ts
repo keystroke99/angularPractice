@@ -11,7 +11,7 @@ export class FeedsComponent implements OnInit {
   
   Feeds: any =[];
   Comments: any =[];
-  imageUrl = 'http://prodapi.celebkonect.com:4300/'
+  imageUrl = this.apiCallService.url;
 
   constructor(private apiCallService: ApicallsService) { }
 
@@ -24,7 +24,6 @@ export class FeedsComponent implements OnInit {
   viewComments(feedId) {
     this.apiCallService.getComments(feedId).subscribe(data => {
       this.Comments = data;
-      console.log(data)
     });
   }
 

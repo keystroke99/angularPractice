@@ -13,6 +13,7 @@ import { ApicallsService } from './services/apicalls.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FeedsComponent } from './components/feeds/feeds.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { LivestatusComponent } from './components/livestatus/livestatus.component';
 
 const appRoutes: Routes = [
   {path: 'datevalidation', component: DatevalidationComponent},
@@ -20,6 +21,8 @@ const appRoutes: Routes = [
   {path: 'celebrities', component: HeroesComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'feeds', component: FeedsComponent},
+  {path: 'liveStatus', component: LivestatusComponent},
+  
   // {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -32,7 +35,8 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     FeedsComponent,
-    CommentsComponent
+    CommentsComponent,
+    LivestatusComponent
   ],
   imports: [
     BrowserModule,
