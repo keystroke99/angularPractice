@@ -18,8 +18,8 @@ export class ApicallsService {
   url: string;
   Users: any;
   constructor(private http: HttpClient) { 
-    //this.url = 'http://prodapi.celebkonect.com:4300/'; // Prod
-    this.url = 'http://devapi.celebkonect.com:4300/'; // Demo
+    this.url = 'http://prodapi.celebkonect.com:4300/'; // Prod
+    // this.url = 'http://devapi.celebkonect.com:4300/'; // Demo
     //this.url = 'http://localhost:4300/'; // Localhost
   }
   

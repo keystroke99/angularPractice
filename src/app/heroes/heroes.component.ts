@@ -14,10 +14,14 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
   Users: any =[];
+  def = true;
+  dude = false;
   constructor(private apiCallService: ApicallsService) { }
 
   ngOnInit() {
     this.apiCallService.getUsers().subscribe(data => {
+      this.def = false;
+      this.dude = true;
       this.Users = data;
     });
   }
