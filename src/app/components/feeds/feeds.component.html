@@ -8,6 +8,9 @@
 <table class="table" *ngIf="dude">
   <thead>
     <th>
+      S.No
+    </th>
+    <th>
       Title
     </th>
     <th>
@@ -18,7 +21,10 @@
     </th>
   </thead>
   <tbody>
-    <tr *ngFor="let feed of Feeds">
+    <tr *ngFor="let feed of Feeds; let i = index">
+      <td>
+        {{i+1}}
+      </td>
       <td>
         {{feed.title}}
       </td>

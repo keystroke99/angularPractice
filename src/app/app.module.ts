@@ -14,6 +14,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FeedsComponent } from './components/feeds/feeds.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { LivestatusComponent } from './components/livestatus/livestatus.component';
+import { ClearDeviceTokenComponent } from './components/clear-device-token/clear-device-token.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 const appRoutes: Routes = [
   {path: 'datevalidation', component: DatevalidationComponent},
@@ -22,6 +24,8 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'feeds', component: FeedsComponent},
   {path: 'liveStatus', component: LivestatusComponent},
+  {path: 'clearDeviceToken', component: ClearDeviceTokenComponent},
+  {path: 'addCredits', component: PaymentComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -35,7 +39,9 @@ const appRoutes: Routes = [
     DashboardComponent,
     FeedsComponent,
     CommentsComponent,
-    LivestatusComponent
+    LivestatusComponent,
+    ClearDeviceTokenComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
